@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Marmelad Lounge — Меню</title>
+<style>
+  /* Простой элегантный стиль (черный + бежево-золотой акцент) */
+  :root{--bg:#0b0b0b;--card:#111;--accent:#caa55b;--text:#eee}
+  body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
+  .wrap{max-width:900px;margin:0 auto;padding:28px}
+  header{display:flex;align-items:center;gap:18px}
+  .logo{width:64px;height:64px;border-radius:8px;background:linear-gradient(135deg,#222,#111);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent)}
+  h1{margin:0;font-size:20px}
+  .meta{margin-top:6px;color:#c9c9c9;font-size:14px}
+  .buttons{margin-left:auto;display:flex;gap:10px}
+  .btn{background:var(--accent);color:#070707;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:600}
+  .grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:20px}
+  .card{background:var(--card);padding:16px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,.6)}
+  .hours{display:flex;flex-wrap:wrap;gap:12px;color:#ddd;font-size:14px}
+  .menu-section{margin-top:6px}
+  .dish{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.03)}
+  .dish:last-child{border-bottom:0}
+  .dish .left{max-width:72%}
+  .dish .title{font-weight:700}
+  .dish .desc{color:#bdbdbd;font-size:13px;margin-top:6px}
+  .price{font-weight:700;color:var(--accent)}
+  footer{margin-top:22px;color:#9b9b9b;font-size:13px;text-align:center}
+  @media(min-width:720px){ .grid{grid-template-columns:1fr 320px} .buttons{flex-direction:column} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo">M</div>
+    <div>
+      <h1>Marmelad Lounge — Меню</h1>
+      <div class="meta">| VIP Room | Живая музыка | Дымные коктейли |</div>
+      <div class="hours">Вс–Чт 16:00–04:00 • Пт–Сб 17:00–05:00</div>
+    </div>
+
+    <div class="buttons">
+      <!-- Заменить PHONE и TEXT -->
+      <a class="btn" href="https://wa.me/77001234567?text=Здравствуйте%2C%20хочу%20забронировать%20стол" target="_blank">Бронь (WhatsApp)</a>
+      <a class="btn" href="#menu" style="background:#222;color:var(--accent)">Меню</a>
+    </div>
+  </header>
+
+  <div class="grid">
+    <div>
+      <div class="card" id="menu">
+        <h3>Холодные закуски</h3>
+        <div class="menu-section">
+          <div class="dish">
+            <div class="left">
+              <div class="title">Тар-тар из лосося</div>
+              <div class="desc">С авокадо, имбирным соусом и хрустящим чипсом</div>
+            </div>
+            <div class="price">3700 ₸</div>
+          </div>
+
+          <div class="dish">
+            <div class="left">
+              <div class="title">Брускетта с томатами</div>
+              <div class="desc">С базиликом и бальзамической глазурью</div>
+            </div>
+            <div class="price">2200 ₸</div>
+          </div>
+        </div>
+
+        <h3 style="margin-top:18px">Горячие блюда</h3>
+        <div class="menu-section">
+          <div class="dish">
+            <div class="left">
+              <div class="title">Стейк Рибай</div>
+              <div class="desc">250 г, соус демиглас, овощи-гриль</div>
+            </div>
+            <div class="price">7200 ₸</div>
+          </div>
+
+          <div class="dish">
+            <div class="left">
+              <div class="title">Паста с креветками</div>
+              <div class="desc">С чесночным соусом и лимоном</div>
+            </div>
+            <div class="price">4200 ₸</div>
+          </div>
+        </div>
+
+        <h3 style="margin-top:18px">Коктейли</h3>
+        <div class="menu-section">
+          <div class="dish">
+            <div class="left">
+              <div class="title">Smoke Old Fashioned</div>
+              <div class="desc">Дымный коктейль с бурбоном и апельсиновым маслом</div>
+            </div>
+            <div class="price">3800 ₸</div>
+          </div>
+
+          <div class="dish">
+            <div class="left">
+              <div class="title">Авторский коктейль “Marmelad”</div>
+              <div class="desc">На основе рома, с дымком и ягодным акцентом</div>
+            </div>
+            <div class="price">3500 ₸</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <aside>
+      <div class="card">
+        <h3>Контакты & Адрес</h3>
+        <p>г. Астана, ул. Примерная, 12 (ориентир — парк)</p>
+        <p>📞 <a href="tel:+77001234567" style="color:var(--accent);text-decoration:none">+7 700 123 45 67</a></p>
+        <p>📲 <a href="https://wa.me/77001234567?text=Здравствуйте%2C%20хочу%20забронировать%20стол" target="_blank" style="color:var(--accent);text-decoration:none">WhatsApp / Бронь</a></p>
+      </div>
+
+      <div class="card" style="margin-top:14px">
+        <h3>VIP Room</h3>
+        <p>Приватная зона для вечеринок и дней рождения. Предварительная бронь и депозит.</p>
+        <p style="margin-top:10px"><strong>Особенности:</strong><br>Собственный бар • Музыкальная аппаратура • Индивидуальное меню</p>
+      </div>
+
+      <div class="card" style="margin-top:14px;text-align:center">
+        <p style="margin:0 0 10px 0">Следите в Instagram</p>
+        <a class="btn" href="https://instagram.com/your_instagram" target="_blank" style="display:inline-block">@marmelad.astana</a>
+      </div>
+    </aside>
+  </div>
+
+  <footer>
+    © Marmelad Lounge — Меню онлайн • Обновлено: <span id="date"></span>
+  </footer>
+</div>
+
+<script>
+  document.getElementById('date').textContent = new Date().toLocaleDateString();
+</script>
+</body>
+</html>
